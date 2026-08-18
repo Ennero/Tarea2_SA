@@ -132,7 +132,7 @@ Esto evita depender de una CDN, reduce problemas de derechos de autor y hace que
 | `playwright-cli` | Permitió probar el portal en escritorio y móvil, comprobar seis tarjetas, verificar la noticia individual, detectar overflow horizontal, tomar capturas y generar el PDF de evidencias. |
 | Herramientas Docker/terminal | Permitieron construir imágenes, levantar servicios, revisar healthchecks, probar NGINX y detener una instancia para comprobar failover. |
 
-La página `docs/evidencias.html` es únicamente el informe que reúne las capturas de prueba. No es el HTML que genera el portal. El HTML de la aplicación se produce desde `server.js` y se adapta mediante `INSTANCE_ID`.
+La fuente técnica `docs/informe-evidencias.source` es únicamente el informe que reúne las capturas de prueba. No es el HTML que genera el portal. El HTML de la aplicación se produce desde `server.js` y se adapta mediante `INSTANCE_ID`.
 
 ---
 

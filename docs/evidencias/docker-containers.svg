@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1568" height="895" viewBox="0 0 1568 895" role="img" aria-labelledby="title desc">
+  <title id="title">Contenedores LADO B funcionando en Docker Desktop</title>
+  <desc id="desc">Vista de Docker Desktop con los contenedores app-1-1, app-2-1 y nginx-1 en ejecución.</desc>
+  <rect width="1568" height="895" fill="#ffffff"/>
+  <rect width="1568" height="48" fill="#1858d2"/>
+  <text x="14" y="31" fill="#ffffff" font-family="Arial,sans-serif" font-size="17" font-weight="700">docker</text>
+  <text x="72" y="31" fill="#dce8ff" font-family="Arial,sans-serif" font-size="17">desktop</text>
+  <rect x="146" y="13" width="74" height="22" rx="11" fill="#2755ae"/>
+  <text x="157" y="28" fill="#ffffff" font-family="Arial,sans-serif" font-size="9" font-weight="700">PERSONAL</text>
+  <rect x="772" y="9" width="470" height="30" rx="4" fill="#2c67df"/>
+  <text x="795" y="29" fill="#dce8ff" font-family="Arial,sans-serif" font-size="13">⌕  Search</text>
+  <text x="1190" y="29" fill="#ffffff" font-family="Arial,sans-serif" font-size="12">Ctrl+K</text>
+  <circle cx="1263" cy="24" r="11" fill="#ffffff" opacity=".2"/><circle cx="1296" cy="24" r="11" fill="#ffffff" opacity=".2"/><circle cx="1330" cy="24" r="11" fill="#ffffff" opacity=".2"/><circle cx="1363" cy="24" r="11" fill="#ffffff" opacity=".2"/><circle cx="1432" cy="24" r="15" fill="#0b45b9"/><text x="1427" y="29" fill="#ffffff" font-family="Arial,sans-serif" font-size="12" font-weight="700">E</text>
+  <rect y="48" width="184" height="847" fill="#f8f9fb"/>
+  <g font-family="Arial,sans-serif" font-size="13" fill="#333b47">
+    <text x="20" y="80" font-weight="700">Gordon</text>
+    <rect x="0" y="84" width="174" height="34" fill="#dce7fb"/><text x="47" y="106" font-weight="700">Containers</text>
+    <text x="47" y="140">Images</text><text x="47" y="164">Volumes</text><text x="47" y="188">Kubernetes</text><text x="47" y="222">Builds</text><text x="47" y="246">Docker Hub</text><text x="47" y="280">Models</text>
+    <text x="47" y="314">MCP Toolkit</text><rect x="116" y="302" width="48" height="18" rx="9" fill="#e9f1ff"/><text x="122" y="315" fill="#2861c5" font-size="8" font-weight="700">BETA</text>
+    <text x="47" y="348">Logs</text><text x="47" y="382">Extensions</text>
+  </g>
+  <rect x="5" y="835" width="167" height="34" rx="4" fill="#2468e8"/><text x="51" y="857" fill="#ffffff" font-family="Arial,sans-serif" font-size="12" font-weight="700">Upgrade plan</text>
+  <circle cx="12" cy="882" r="5" fill="#3d9a78"/><text x="22" y="886" fill="#59636f" font-family="Arial,sans-serif" font-size="11">Engine running</text>
+  <g font-family="Arial,sans-serif" fill="#202832">
+    <text x="209" y="81" font-size="18" font-weight="700">Containers</text>
+    <text x="277" y="81" font-size="9" fill="#376dd0">Give feedback ↗</text>
+    <text x="220" y="112" font-size="11">Container CPU usage ⓘ</text><text x="220" y="136" font-size="13" fill="#3d9a78">0.00% / 1600% (16 CPUs available)</text>
+    <text x="882" y="112" font-size="11">Container memory usage ⓘ</text><text x="882" y="136" font-size="13" fill="#3d9a78">36.21MB / 7.26GB</text>
+    <text x="1465" y="116" font-size="10" fill="#3168d8">Show charts</text>
+  </g>
+  <rect x="210" y="165" width="332" height="35" rx="4" fill="#ffffff" stroke="#ccd3dd"/><text x="228" y="188" fill="#788390" font-family="Arial,sans-serif" font-size="13">⌕  Search</text>
+  <text x="571" y="188" fill="#3c6ed2" font-family="Arial,sans-serif" font-size="13">▥</text><circle cx="603" cy="181" r="10" fill="#ffffff" stroke="#cbd1da"/><text x="620" y="185" fill="#59636f" font-family="Arial,sans-serif" font-size="11">Only show running containers</text>
+  <rect x="209" y="215" width="1324" height="37" fill="#f4f6f8"/>
+  <g font-family="Arial,sans-serif" font-size="10" fill="#586371" font-weight="700"><text x="220" y="238">□</text><text x="272" y="238">↑</text><text x="305" y="238">Name</text><text x="427" y="238">Container ID</text><text x="554" y="238">Image</text><text x="670" y="238">Port(s)</text><text x="818" y="238">CPU (%)</text><text x="884" y="238">Memory usage</text><text x="1018" y="238">Memory (%)</text><text x="1118" y="238">Disk read/write</text><text x="1227" y="238">Network I/O</text><text x="1330" y="238">PIDS</text><text x="1400" y="238">Last started</text></g>
+  <g stroke="#e2e6eb" stroke-width="1"><path d="M209 252H1533M209 299H1533M209 346H1533M209 393H1533"/></g>
+  <g font-family="Arial,sans-serif" font-size="11" fill="#3c4652">
+    <text x="220" y="275">□</text><circle cx="284" cy="271" r="5" fill="#3d9a78"/><text x="306" y="276" font-weight="700">tarea2_sa</text><text x="430" y="276">—</text><text x="555" y="276">—</text><text x="672" y="276">—</text><text x="840" y="276">0%</text><text x="880" y="276">36.21MB / 22.29</text><text x="1008" y="276">0.47%</text><text x="1120" y="276">80.23MB / 4.1KB</text><text x="1230" y="276">98.67KB / 150.5K</text><text x="1335" y="276">11, 11, 2</text>
+    <text x="220" y="322">□</text><circle cx="284" cy="318" r="5" fill="#3d9a78"/><text x="306" y="323" font-weight="700">app-1-1</text><text x="430" y="323">8e1941af410d</text><text x="555" y="323" fill="#3168d8">portal-latido-ia:local</text><text x="840" y="323">0%</text><text x="880" y="323">16.23MB / 7.43G</text><text x="1008" y="323">0.21%</text><text x="1120" y="323">32.3MB / 0B</text><text x="1230" y="323">8.46KB / 23.8KB</text><text x="1335" y="323">11</text><text x="1400" y="323">41 minutes ago</text>
+    <text x="220" y="369">□</text><circle cx="284" cy="365" r="5" fill="#3d9a78"/><text x="306" y="370" font-weight="700">app-2-1</text><text x="430" y="370">7d573d4b482e</text><text x="555" y="370" fill="#3168d8">portal-latido-ia:local</text><text x="840" y="370">0%</text><text x="880" y="370">16.98MB / 7.43G</text><text x="1008" y="370">0.22%</text><text x="1120" y="370">40.1MB / 0B</text><text x="1230" y="370">7.71KB / 45.4KB</text><text x="1335" y="370">11</text><text x="1400" y="370">41 minutes ago</text>
+    <text x="220" y="416">□</text><circle cx="284" cy="412" r="5" fill="#3d9a78"/><text x="306" y="417" font-weight="700">nginx-1</text><text x="430" y="417">6f3d029702e9</text><text x="555" y="417" fill="#3168d8">nginx:1.27-alpine</text><text x="672" y="417" fill="#3168d8">8080:80 ↗</text><text x="840" y="417">0%</text><text x="880" y="417">3MB / 7.43G</text><text x="1008" y="417">0.04%</text><text x="1120" y="417">7.83MB / 4.1KB</text><text x="1230" y="417">82.5KB / 81.3KB</text><text x="1335" y="417">2</text><text x="1400" y="417">41 minutes ago</text>
+  </g>
+  <rect x="209" y="450" width="1324" height="2" fill="#e8edf4"/><text x="1408" y="870" fill="#59636f" font-family="Arial,sans-serif" font-size="11">Showing 4 items</text>
+  <text x="1430" y="886" fill="#59636f" font-family="Arial,sans-serif" font-size="11">Terminal</text><text x="1515" y="886" fill="#3d9a78" font-family="Arial,sans-serif" font-size="11">✓ v4.87.0</text>
+</svg>

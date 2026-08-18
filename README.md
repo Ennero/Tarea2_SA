@@ -164,6 +164,6 @@ El contenido no se presenta como información verificada. Antes de usarlo en un 
 
 ## Entregables y evidencias
 
-El repositorio contiene el código fuente, `Dockerfile`, `docker-compose.yml`, configuración de NGINX, recursos, prompts, README, scripts de verificación, arquitectura y guion de video. La evidencia generada durante esta ejecución está en `docs/evidencias/evidencias.pdf`, junto con las capturas PNG y la matriz `docs/pruebas.md`. La bitácora `prompts/noticias.md` también registra las solicitudes y respuestas principales del desarrollo.
+El repositorio contiene el código fuente, `Dockerfile`, `docker-compose.yml`, configuración de NGINX, recursos, prompts, README, scripts de verificación, arquitectura y guion de video. El informe formal `docs/evidencias/evidencias.pdf` incluye los datos del estudiante, la evidencia visual de Docker Desktop, acceso al portal, rutas, IA, balanceo, failover y fragmentos de los archivos técnicos. También se incluyen las capturas PNG, `docker-containers.svg` y la matriz `docs/pruebas.md`. La bitácora `prompts/noticias.md` registra las solicitudes y respuestas principales del desarrollo.
 
 Para regenerar o ampliar las evidencias, levantar el proyecto, repetir el flujo de `docs/guion-video.md` y guardar las capturas en `docs/evidencias/`. Para el video final de 3–5 minutos, grabar la secuencia del guion y añadir el enlace en la entrega académica. El guion cubre explícitamente: contenedores, rutas, balanceo, dos IDs de instancia, failover y atribución de IA.

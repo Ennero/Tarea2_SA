@@ -6,7 +6,9 @@ const { URL } = require('node:url');
 const root = path.resolve(__dirname, '..', 'docs');
 const types = {
   '.html': 'text/html; charset=utf-8',
+  '.source': 'text/html; charset=utf-8',
   '.png': 'image/png',
+  '.svg': 'image/svg+xml',
   '.css': 'text/css; charset=utf-8'
 };
 

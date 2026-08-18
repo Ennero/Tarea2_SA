@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Evidencias · LADO B</title>
+  <style>
+    @page { size: A4; margin: 16mm; }
+    :root { --paper:#f4efe6; --deep:#e9dfd0; --ink:#172126; --muted:#667178; --line:rgba(23,33,38,.2); --signal:#ff684c; --acid:#d7eb72; --blue:#3168d8; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:11pt/1.55 "Segoe UI",Arial,sans-serif; }
+    h1,h2,h3 { margin:0; font-family:Georgia,serif; letter-spacing:-.05em; line-height:.98; }
+    h1 { font-size:45pt; } h2 { font-size:31pt; } h3 { margin-bottom:10px; font-size:18pt; }
+    p { margin:0 0 10px; }
+    .cover,.page { min-height:265mm; } .page { page-break-before:always; }
+    .cover { display:flex; flex-direction:column; justify-content:space-between; }
+    .eyebrow,.label { color:var(--signal); font-size:9pt; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .cover-main { margin-top:48mm; } .cover-main em { color:var(--signal); font-weight:500; }
+    .subtitle { max-width:560px; margin-top:22px; color:var(--muted); font-size:15pt; }
+    .student { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:30px; border:1px solid var(--line); background:var(--line); }
+    .student div { padding:13px 15px; background:var(--paper); } .student strong { display:block; margin-bottom:3px; color:var(--signal); font-size:8pt; letter-spacing:.1em; text-transform:uppercase; } .student span { font-size:11pt; font-weight:700; }
+    .notice { margin:20px 0; padding:16px 18px; border-left:5px solid var(--signal); background:var(--deep); } .notice strong { display:block; margin-bottom:4px; }
+    .footer { display:flex; justify-content:space-between; gap:20px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:9pt; }
+    .label { margin-bottom:9px; } .lead { max-width:760px; margin:14px 0 24px; color:var(--muted); font-size:12pt; }
+    .shot { margin:18px 0 22px; page-break-inside:avoid; } .shot img { display:block; width:100%; height:auto; border:1px solid var(--line); }
+    .containers img { max-height:145mm; object-fit:contain; object-position:top; } .portal img { max-height:135mm; object-fit:contain; object-position:top; } .detail img { max-height:104mm; object-fit:contain; object-position:top; } .mobile { width:45%; }
+    .caption { margin-top:7px; color:var(--muted); font-size:9pt; }
+    .facts,.columns { display:grid; grid-template-columns:1fr 1fr; gap:22px; } .facts { gap:13px; margin:18px 0; }
+    .fact { padding:15px; background:var(--acid); } .fact strong { display:block; margin-bottom:4px; font-size:9pt; letter-spacing:.1em; text-transform:uppercase; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; font-size:10pt; } th,td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; } th { background:var(--ink); color:var(--paper); font-size:9pt; letter-spacing:.06em; text-transform:uppercase; }
+    code { padding:2px 4px; background:var(--deep); font-family:Consolas,monospace; font-size:9pt; }
+    .terminal,.code-title { padding:8px 12px; background:#0e171b; color:var(--acid); font:9pt Consolas,monospace; } .code-title { margin-top:18px; background:var(--blue); color:#fff; font-family:"Segoe UI",Arial,sans-serif; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    pre { overflow:hidden; margin:0 0 18px; padding:14px 16px; background:#202b31; color:#eff7ed; font:8.8pt/1.55 Consolas,monospace; white-space:pre-wrap; }
+    .checklist { display:grid; grid-template-columns:1fr 1fr; gap:10px 28px; margin:24px 0; padding:0; list-style:none; font-size:11pt; } .checklist li::before { margin-right:8px; color:#3d9a78; content:"✓"; font-weight:800; }
+    .muted { color:var(--muted); } .url { color:var(--blue); font-family:Consolas,monospace; font-weight:700; }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div>
+      <p class="eyebrow">Software Avanzado · Evidencias de implementación</p>
+      <div class="cover-main">
+        <h1>LADO B<br><em>Portal de noticias con IA</em></h1>
+        <p class="subtitle">Docker Compose · NGINX · Round Robin · Node.js 22</p>
+        <div class="student">
+          <div><strong>Estudiante</strong><span>Enner Esaí Mendizabal Castro</span></div>
+          <div><strong>Carné</strong><span>202302220</span></div>
+          <div><strong>Curso</strong><span>Software Avanzado</span></div>
+          <div><strong>Catedrático</strong><span>ING. MARCO TULIO ALDANA PRILLWITZ</span></div>
+          <div><strong>Auxiliar</strong><span>KEVIN RAÚL POZUELOS ESTRADA</span></div>
+          <div><strong>Acceso</strong><span>http://localhost:8080</span></div>
+        </div>
+        <div class="notice"><strong>Nota académica.</strong> Las noticias fueron generadas o asistidas por ChatGPT y revisadas para este ejercicio. No son información periodística verificada.</div>
+      </div>
+    </div>
+    <div class="footer"><span>Informe de pruebas</span><span>18 de agosto de 2026</span></div>
+  </section>
+
+  <section class="page">
+    <p class="label">01 · Contenedores</p>
+    <h2>Los servicios están funcionando</h2>
+    <p class="lead">La evidencia visual muestra las dos instancias de la aplicación y NGINX. El puerto público pertenece únicamente al proxy.</p>
+    <div class="shot containers"><img src="evidencias/docker-containers.svg" alt="Contenedores app-1-1, app-2-1 y nginx-1 funcionando en Docker Desktop"><p class="caption">Estado visual basado en la captura de Docker Desktop compartida y contrastado con Docker Compose.</p></div>
+    <div class="terminal">docker compose ps</div>
+    <pre>NAME                SERVICE   STATUS                   PORTS
+app-1-1             app-1     Up (healthy)             3000/tcp
+app-2-1             app-2     Up (healthy)             3000/tcp
+nginx-1             nginx     Up                       0.0.0.0:8080-&gt;80/tcp</pre>
+    <div class="facts"><div class="fact"><strong>Privacidad</strong>Las apps no publican el puerto 3000 en el host.</div><div class="fact"><strong>Entrada única</strong>El navegador entra por NGINX mediante el puerto 8080.</div></div>
+  </section>
+
+  <section class="page">
+    <p class="label">02 · Acceso y rutas</p>
+    <h2>El portal entra por NGINX</h2>
+    <p class="lead">Dirección de acceso: <span class="url">http://localhost:8080</span>. La interfaz muestra seis noticias y la instancia que respondió.</p>
+    <div class="shot portal"><img src="evidencias/01-portada-escritorio.png" alt="Portada de LADO B en escritorio"><p class="caption">Portada del portal en escritorio.</p></div>
+    <div class="columns">
+      <div><h3>Encabezados</h3><pre>HTTP/1.1 200 OK
+X-App-Instance: app-1
+X-Load-Balancer: nginx
+Content-Type: text/html; charset=utf-8</pre></div>
+      <div><h3>Rutas verificadas</h3><table><tr><th>Ruta</th><th>Resultado</th></tr><tr><td><code>/</code></td><td>Portada · 200</td></tr><tr><td><code>/noticias</code></td><td>Catálogo · 200</td></tr><tr><td><code>/noticias/:slug</code></td><td>Detalle · 200</td></tr><tr><td><code>/api/noticias</code></td><td>JSON · 200</td></tr><tr><td><code>/nginx-status</code></td><td>Estado · 200</td></tr></table></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="label">03 · Noticias e IA</p>
+    <h2>Contenido completo y atribuido</h2>
+    <div class="shot detail"><img src="evidencias/02-noticia-detalle.png" alt="Detalle de noticia con atribución a ChatGPT"><p class="caption">Noticia individual con título, fecha, categoría, imagen, resumen, contenido y ficha editorial.</p></div>
+    <div class="facts"><div class="fact"><strong>Seis noticias</strong>La API devuelve seis elementos con título, fecha, categoría, imagen y contenido.</div><div class="fact"><strong>Herramienta identificada</strong>Cada noticia muestra que fue generada con ChatGPT y revisada por el equipo.</div></div>
+    <div class="notice"><strong>Responsabilidad.</strong> El portal advierte que el contenido es académico y no información verificada. Los prompts están en <code>prompts/noticias.md</code>.</div>
+    <h3>Responsive</h3>
+    <div class="shot mobile"><img src="evidencias/03-portada-movil.png" alt="Portada del portal en un viewport móvil"><p class="caption">Prueba Playwright a 390 × 844, sin overflow horizontal.</p></div>
+  </section>
+
+  <section class="page">
+    <p class="label">04 · Balanceo</p>
+    <h2>Round Robin entre dos instancias</h2>
+    <p class="lead">NGINX distribuye solicitudes mediante el upstream <code>newsroom_app</code>. El encabezado <code>X-App-Instance</code> demuestra qué backend respondió.</p>
+    <div class="terminal">sh scripts/verify.sh · solicitudes consecutivas</div>
+    <pre>Solicitud 01 -&gt; app-1
+Solicitud 02 -&gt; app-2
+Solicitud 03 -&gt; app-1
+Solicitud 04 -&gt; app-2
+Solicitud 05 -&gt; app-1
+Solicitud 06 -&gt; app-2
+Solicitud 07 -&gt; app-1
+Solicitud 08 -&gt; app-2
+Solicitud 09 -&gt; app-1
+Solicitud 10 -&gt; app-2
+Solicitud 11 -&gt; app-1
+Solicitud 12 -&gt; app-2</pre>
+    <table><tr><th>Backend</th><th>Marca visual</th><th>Encabezado</th></tr><tr><td><code>app-1:3000</code></td><td>LADO A · LA</td><td><code>X-App-Instance: app-1</code></td></tr><tr><td><code>app-2:3000</code></td><td>LADO B · LB</td><td><code>X-App-Instance: app-2</code></td></tr></table>
+    <div class="notice"><strong>Algoritmo: Round Robin.</strong> NGINX reparte solicitudes secuencialmente entre los backends disponibles.</div>
+  </section>
+
+  <section class="page">
+    <p class="label">05 · Failover</p>
+    <h2>El portal continúa si una instancia se detiene</h2>
+    <p class="lead">Se detuvo <code>app-1</code> sin detener NGINX. El tráfico continuó siendo atendido por <code>app-2</code>.</p>
+    <div class="terminal">docker compose stop app-1 · resultado</div>
+    <pre>app-1-1             Stopped
+app-2-1             Up (healthy)
+nginx-1             Up · 0.0.0.0:8080-&gt;80/tcp
+
+Solicitud 01 -&gt; app-2
+Solicitud 02 -&gt; app-2
+Solicitud 03 -&gt; app-2
+Solicitud 04 -&gt; app-2
+Solicitud 05 -&gt; app-2
+Solicitud 06 -&gt; app-2
+
+Resultado: el portal, las rutas y la API continuaron respondiendo.</pre>
+    <div class="columns"><div><h3>Configuración</h3><pre>max_fails=2
+fail_timeout=5s
+proxy_next_upstream error timeout
+http_502 http_503 http_504</pre></div><div><h3>Recuperación</h3><pre>docker compose start app-1
+docker compose ps
+
+app-1 volvió a healthy.</pre></div></div>
+  </section>
+
+  <section class="page">
+    <p class="label">06 · Archivos técnicos</p>
+    <h2>Configuraciones entregadas</h2>
+    <p class="lead">Los archivos completos están en el repositorio. Estos fragmentos muestran las partes evaluables.</p>
+    <div class="code-title">docker-compose.yml</div>
+    <pre>services:
+  app-1:
+    build: .
+    environment:
+      INSTANCE_ID: app-1
+    expose: ["3000"]
+    networks: [newsroom]
+
+  app-2:
+    environment:
+      INSTANCE_ID: app-2
+    expose: ["3000"]
+    networks: [newsroom]
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports: ["8080:80"]
+    networks: [newsroom]</pre>
+    <div class="code-title">nginx/nginx.conf</div>
+    <pre>upstream newsroom_app {
+    server app-1:3000 max_fails=2 fail_timeout=5s;
+    server app-2:3000 max_fails=2 fail_timeout=5s;
+}
+
+location /noticias {
+    proxy_pass http://newsroom_app;
+    proxy_set_header X-Load-Balancer "nginx";
+    proxy_next_upstream error timeout http_502 http_503 http_504;
+}</pre>
+    <div class="code-title">Dockerfile</div>
+    <pre>FROM node:22-alpine
+WORKDIR /app
+ENV NODE_ENV=production PORT=3000
+RUN addgroup -S appgroup &amp;&amp; adduser -S appuser -G appgroup
+COPY package.json ./
+COPY server.js ./
+COPY public ./public
+USER appuser
+EXPOSE 3000
+HEALTHCHECK ...
+CMD ["node", "server.js"]</pre>
+  </section>
+
+  <section class="page">
+    <p class="label">07 · Entrega</p>
+    <h2>Material preparado</h2>
+    <ul class="checklist"><li>Código fuente completo</li><li>Dockerfile</li><li>docker-compose.yml</li><li>Configuración de NGINX</li><li>Recursos SVG locales</li><li>README.md</li><li>Prompts conservados</li><li>Scripts de verificación</li><li>Arquitectura documentada</li><li>PDF de evidencias</li><li>Guion del video</li><li>Enlace de video pendiente</li></ul>
+    <div class="notice"><strong>Demostración final.</strong> Ejecutar <code>docker compose up --build -d</code>, abrir <code>http://localhost:8080</code>, mostrar <code>docker compose ps</code>, ejecutar el script, detener <code>app-1</code>, comprobar el failover, restaurarlo y mostrar <code>prompts/noticias.md</code>.</div>
+    <table><tr><th>Archivo</th><th>Qué contiene</th></tr><tr><td><code>server.js</code></td><td>Servidor HTML/JSON, seis noticias y marca por instancia.</td></tr><tr><td><code>docker-compose.yml</code></td><td>Dos apps, NGINX, red interna y puerto público.</td></tr><tr><td><code>nginx/nginx.conf</code></td><td>Upstream, proxy, headers, rutas y failover.</td></tr><tr><td><code>prompts/noticias.md</code></td><td>Prompts editoriales y bitácora del desarrollo.</td></tr><tr><td><code>docs/evidencias/evidencias.pdf</code></td><td>Este informe formal.</td></tr></table>
+    <p class="muted">Pendiente externo: grabar y subir el video demostrativo de 3–5 minutos.</p>
+  </section>
+</body>
+</html>
