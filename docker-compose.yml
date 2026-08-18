@@ -1,0 +1,61 @@
+services:
+  app-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portal-latido-ia:local
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      INSTANCE_ID: app-1
+    expose:
+      - "3000"
+    networks:
+      - newsroom
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+
+  app-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portal-latido-ia:local
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      INSTANCE_ID: app-2
+    expose:
+      - "3000"
+    networks:
+      - newsroom
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    depends_on:
+      app-1:
+        condition: service_healthy
+      app-2:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - newsroom
+    restart: unless-stopped
+
+networks:
+  newsroom:
+    driver: bridge

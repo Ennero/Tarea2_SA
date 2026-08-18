@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Computación local</title><desc id="desc">Circuitos abstractos en azul y naranja.</desc>
+  <rect width="1200" height="720" fill="#182936"/><circle cx="1020" cy="110" r="235" fill="#5077ff" opacity=".9"/><circle cx="190" cy="620" r="270" fill="#ff684c"/><path d="M0 480C190 340 300 440 450 300s290-85 430 42 190 48 320-30v408H0Z" fill="#d7eb72"/>
+  <g fill="none" stroke="#f4efe6" stroke-width="5" opacity=".92"><path d="M80 134h240v104h100v116h180v-94h138v-92h236"/><path d="M208 52v82M492 354v118M736 148v-79M945 168v-92"/><path d="M95 522h192v-86h118v-98h136"/></g>
+  <g fill="#182936"><circle cx="80" cy="134" r="11"/><circle cx="320" cy="238" r="11"/><circle cx="420" cy="354" r="11"/><circle cx="600" cy="260" r="11"/><circle cx="738" cy="168" r="11"/><circle cx="974" cy="168" r="11"/></g>
+  <text x="72" y="654" fill="#182936" font-family="Georgia,serif" font-size="54" font-weight="700">LOCAL / SIGNAL</text>
+</svg>

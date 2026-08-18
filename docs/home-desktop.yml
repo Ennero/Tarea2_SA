@@ -1,0 +1,220 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "LADO B, volver al inicio" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: LB
+        - generic [ref=e7]:
+          - strong [ref=e8]: LADO B
+          - generic [ref=e9]: actualidad asistida
+      - navigation "Navegación principal" [ref=e10]:
+        - link "Portada" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Noticias" [ref=e12] [cursor=pointer]:
+          - /url: /noticias
+        - link "Nuestro método" [ref=e13] [cursor=pointer]:
+          - /url: /#metodo
+      - generic "Identificador de la instancia que respondió" [ref=e14]:
+        - generic [ref=e16]:
+          - text: Instancia
+          - strong [ref=e17]: app-1
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Edición 01 · Agosto 2026
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: Un portal de noticias de laboratorio
+        - heading [level=1] [ref=e26]:
+          - text: El presente
+          - emphasis [ref=e27]: no viene
+          - text: en línea recta.
+        - paragraph [ref=e28]: Historias, señales y preguntas para entender lo que se mueve alrededor. Texto generado o asistido por IA, revisado con mirada humana.
+      - generic [ref=e29]:
+        - generic [ref=e30]: IA
+        - generic [ref=e31]: + criterio
+        - generic [ref=e32]: + contexto
+    - region "Aviso académico" [ref=e33]:
+      - generic [ref=e34]: "!"
+      - generic [ref=e35]:
+        - strong [ref=e36]: Proyecto académico · lectura crítica activada
+        - paragraph [ref=e37]: Estas piezas no son información periodística verificada. Revisa fuentes, posibles sesgos y afirmaciones antes de reutilizarlas.
+      - link "Conoce el método" [ref=e38] [cursor=pointer]:
+        - /url: /#metodo
+        - text: Conoce el método ↓
+    - region [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: La selección
+          - heading "Historias destacadas" [level=2] [ref=e43]
+        - paragraph [ref=e44]: 6 historias encontradas
+      - generic [ref=e45]:
+        - navigation "Filtrar noticias por categoría" [ref=e46]:
+          - link "Todas" [ref=e47] [cursor=pointer]:
+            - /url: /
+          - link "Tecnología" [ref=e48] [cursor=pointer]:
+            - /url: /?categoria=Tecnolog%C3%ADa
+          - link "Ciencia" [ref=e49] [cursor=pointer]:
+            - /url: /?categoria=Ciencia
+          - link "Cultura" [ref=e50] [cursor=pointer]:
+            - /url: /?categoria=Cultura
+          - link "Ambiente" [ref=e51] [cursor=pointer]:
+            - /url: /?categoria=Ambiente
+          - link "Videojuegos" [ref=e52] [cursor=pointer]:
+            - /url: /?categoria=Videojuegos
+          - link "Comunidad" [ref=e53] [cursor=pointer]:
+            - /url: /?categoria=Comunidad
+        - generic [ref=e54]:
+          - generic [ref=e55]: Buscar noticias
+          - searchbox "Buscar noticias" [ref=e56]
+          - button "Buscar noticias" [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: ⌕
+      - generic [ref=e59]:
+        - article [ref=e60]:
+          - 'link "Leer: La computación local cambia el pulso del campus" [ref=e61] [cursor=pointer]':
+            - /url: /noticias/la-computacion-local-cambia-el-pulso-del-campus
+            - img "Ilustración abstracta de un circuito azul y naranja" [ref=e62]
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]: Tecnología
+              - generic [ref=e66]: ·
+              - generic [ref=e67]: 4 min de lectura
+            - heading [level=2] [ref=e68]:
+              - link "La computación local cambia el pulso del campus" [ref=e69] [cursor=pointer]:
+                - /url: /noticias/la-computacion-local-cambia-el-pulso-del-campus
+            - paragraph [ref=e70]: Nuevas herramientas acercan modelos de IA a los laboratorios sin depender siempre de la nube.
+            - generic [ref=e71]:
+              - time [ref=e72]: 14 de agosto de 2026
+              - link "Abrir noticia" [ref=e73] [cursor=pointer]:
+                - /url: /noticias/la-computacion-local-cambia-el-pulso-del-campus
+                - text: Abrir noticia ↗
+        - generic [ref=e74]:
+          - paragraph [ref=e75]: En esta edición
+          - paragraph [ref=e76]: Seis miradas breves sobre tecnología, comunidad, cultura y el mundo que estamos construyendo.
+          - paragraph [ref=e78]:
+            - text: 6 historias encontradasActualizado el
+            - time [ref=e79]: 17 de agosto de 2026
+      - generic [ref=e80]:
+        - article [ref=e81]:
+          - 'link "Leer: El mapa invisible de los microplásticos urbanos" [ref=e82] [cursor=pointer]':
+            - /url: /noticias/el-mapa-invisible-de-los-microplasticos-urbanos
+            - img "Ilustración de partículas y una lupa sobre un mapa" [ref=e83]
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: Ciencia
+              - generic [ref=e87]: ·
+              - generic [ref=e88]: 5 min de lectura
+            - heading [level=2] [ref=e89]:
+              - link "El mapa invisible de los microplásticos urbanos" [ref=e90] [cursor=pointer]:
+                - /url: /noticias/el-mapa-invisible-de-los-microplasticos-urbanos
+            - paragraph [ref=e91]: Sensores de bajo costo y ciencia ciudadana ayudan a identificar cómo se mueve el residuo en la ciudad.
+            - generic [ref=e92]:
+              - time [ref=e93]: 12 de agosto de 2026
+              - link "Abrir noticia" [ref=e94] [cursor=pointer]:
+                - /url: /noticias/el-mapa-invisible-de-los-microplasticos-urbanos
+                - text: Abrir noticia ↗
+        - article [ref=e95]:
+          - 'link "Leer: Cuando la ciudad se vuelve un lienzo sonoro" [ref=e96] [cursor=pointer]':
+            - /url: /noticias/cuando-la-ciudad-se-vuelve-un-lienzo-sonoro
+            - img "Ilustración de ondas sonoras sobre una escena urbana" [ref=e97]
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: Cultura
+              - generic [ref=e101]: ·
+              - generic [ref=e102]: 3 min de lectura
+            - heading [level=2] [ref=e103]:
+              - link "Cuando la ciudad se vuelve un lienzo sonoro" [ref=e104] [cursor=pointer]:
+                - /url: /noticias/cuando-la-ciudad-se-vuelve-un-lienzo-sonoro
+            - paragraph [ref=e105]: Artistas y colectivos están convirtiendo los paisajes cotidianos en archivos vivos de memoria urbana.
+            - generic [ref=e106]:
+              - time [ref=e107]: 09 de agosto de 2026
+              - link "Abrir noticia" [ref=e108] [cursor=pointer]:
+                - /url: /noticias/cuando-la-ciudad-se-vuelve-un-lienzo-sonoro
+                - text: Abrir noticia ↗
+        - article [ref=e109]:
+          - 'link "Leer: La energía del sol entra en la agenda del barrio" [ref=e110] [cursor=pointer]':
+            - /url: /noticias/la-energia-del-sol-entra-en-la-agenda-del-barrio
+            - img "Ilustración de un sol sobre paneles y hojas verdes" [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: Ambiente
+              - generic [ref=e115]: ·
+              - generic [ref=e116]: 4 min de lectura
+            - heading [level=2] [ref=e117]:
+              - link "La energía del sol entra en la agenda del barrio" [ref=e118] [cursor=pointer]:
+                - /url: /noticias/la-energia-del-sol-entra-en-la-agenda-del-barrio
+            - paragraph [ref=e119]: Cooperativas locales exploran modelos de generación compartida para reducir costos y aprender juntas.
+            - generic [ref=e120]:
+              - time [ref=e121]: 06 de agosto de 2026
+              - link "Abrir noticia" [ref=e122] [cursor=pointer]:
+                - /url: /noticias/la-energia-del-sol-entra-en-la-agenda-del-barrio
+                - text: Abrir noticia ↗
+        - article [ref=e123]:
+          - 'link "Leer: Los videojuegos también se ensayan con lápiz" [ref=e124] [cursor=pointer]':
+            - /url: /noticias/los-videojuegos-tambien-se-ensayan-con-lapiz
+            - img "Ilustración de un control, píxeles y una libreta" [ref=e125]
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: Videojuegos
+              - generic [ref=e129]: ·
+              - generic [ref=e130]: 3 min de lectura
+            - heading [level=2] [ref=e131]:
+              - link "Los videojuegos también se ensayan con lápiz" [ref=e132] [cursor=pointer]:
+                - /url: /noticias/los-videojuegos-tambien-se-ensayan-con-lapiz
+            - paragraph [ref=e133]: El prototipado en papel vuelve a las aulas para probar reglas antes de escribir una línea de código.
+            - generic [ref=e134]:
+              - time [ref=e135]: 03 de agosto de 2026
+              - link "Abrir noticia" [ref=e136] [cursor=pointer]:
+                - /url: /noticias/los-videojuegos-tambien-se-ensayan-con-lapiz
+                - text: Abrir noticia ↗
+        - article [ref=e137]:
+          - 'link "Leer: La universidad que aprende a escuchar sus datos" [ref=e138] [cursor=pointer]':
+            - /url: /noticias/la-universidad-que-aprende-a-escuchar-sus-datos
+            - img "Ilustración de personas conectadas alrededor de un tablero" [ref=e139]
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Comunidad
+              - generic [ref=e143]: ·
+              - generic [ref=e144]: 6 min de lectura
+            - heading [level=2] [ref=e145]:
+              - link "La universidad que aprende a escuchar sus datos" [ref=e146] [cursor=pointer]:
+                - /url: /noticias/la-universidad-que-aprende-a-escuchar-sus-datos
+            - paragraph [ref=e147]: Un tablero abierto reúne señales de movilidad, bienestar y uso de espacios sin convertir a las personas en números.
+            - generic [ref=e148]:
+              - time [ref=e149]: 30 de julio de 2026
+              - link "Abrir noticia" [ref=e150] [cursor=pointer]:
+                - /url: /noticias/la-universidad-que-aprende-a-escuchar-sus-datos
+                - text: Abrir noticia ↗
+    - region [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: Detrás de la portada
+          - heading [level=2] [ref=e155]:
+            - text: La IA acelera.
+            - emphasis [ref=e156]: El criterio decide.
+        - generic [ref=e157]:
+          - paragraph [ref=e158]: "Este portal simula una redacción experimental: cada texto nace de un prompt, pasa por una revisión humana y conserva la atribución de la herramienta utilizada."
+          - paragraph [ref=e159]: La interfaz también deja una pista técnica visible. El identificador de instancia en la esquina superior y en la respuesta HTTP permite comprobar el balanceo de NGINX.
+          - link "Ver datos en JSON" [ref=e160] [cursor=pointer]:
+            - /url: /api/noticias
+            - text: Ver datos en JSON
+            - generic [ref=e161]: ↗
+  - contentinfo [ref=e162]:
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - link "LADO B, volver al inicio" [ref=e165] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e166]: LB
+          - generic [ref=e167]:
+            - strong [ref=e168]: LADO B
+            - generic [ref=e169]: actualidad asistida
+        - paragraph [ref=e170]: Un laboratorio editorial para aprender a contar el presente con criterio, contexto y herramientas de IA.
+      - generic [ref=e171]:
+        - paragraph [ref=e172]: Proyecto académico
+        - paragraph [ref=e173]: Las noticias son piezas de práctica generadas o asistidas por inteligencia artificial. No representan información periodística verificada.
+      - generic [ref=e174]:
+        - paragraph [ref=e175]: Respuesta distribuida
+        - paragraph [ref=e176]: "NGINX · Round RobinX-App-Instance: app-1"
+    - generic [ref=e177]:
+      - generic [ref=e178]: © 2026 LADO B
+      - generic [ref=e179]: Hecho para aprender, revisar y volver a preguntar.

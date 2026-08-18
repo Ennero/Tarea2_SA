@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cartografía sonora</title><desc id="desc">Ondas sonoras atraviesan una ciudad colorida.</desc>
+  <rect width="1200" height="720" fill="#f5d9c5"/><path d="M0 550 120 458l96 64 123-157 88 98 127-212 112 120 130-184 126 140 108-70 170 126v337H0Z" fill="#5077ff"/><path d="M0 492c132-88 211-102 340-18s231 78 355-20 241-107 505-42" fill="none" stroke="#d7eb72" stroke-width="21"/><g fill="none" stroke="#172126" stroke-width="5" opacity=".8"><path d="M120 177c120-100 250-100 370 0s250 100 370 0 210-100 270-40"/><path d="M87 246c140-122 280-122 420 0s270 122 410 0 194-119 260-48"/><path d="M29 322c160-144 330-144 490 0s300 144 460 0 160-134 255-50"/></g><circle cx="200" cy="190" r="35" fill="#ff684c"/><text x="68" y="655" fill="#172126" font-family="Georgia,serif" font-size="52" font-weight="700">CITY / LISTENING</text>
+</svg>

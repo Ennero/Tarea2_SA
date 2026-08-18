@@ -1,0 +1,14 @@
+{
+  "name": "portal-latido-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal académico de noticias asistidas por IA con NGINX y Docker Compose",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
