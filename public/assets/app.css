@@ -395,6 +395,10 @@ img {
   margin-bottom: 32px;
 }
 
+#stories-heading {
+  scroll-margin-top: 28px;
+}
+
 .section-heading h2 {
   margin: 0;
   font-family: var(--display);

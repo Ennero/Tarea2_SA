@@ -1,12 +1,14 @@
-import { createServer } from 'node:http';
-import { stat, createReadStream } from 'node:fs';
-import { join, resolve, sep, extname } from 'node:path';
-import { URL } from 'node:url';
+const { createServer } = require('node:http');
+const { stat, createReadStream } = require('node:fs');
+const { join, resolve, sep, extname } = require('node:path');
+const { URL } = require('node:url');
 
 const PORT = Number(process.env.PORT || 3000);
 const INSTANCE_ID = process.env.INSTANCE_ID || process.env.HOSTNAME || 'local-app';
 const PUBLIC_DIR = join(__dirname, 'public');
-const SITE_NAME = 'LADO B';
+const INSTANCE_BRANDS = { 'app-1': 'LADO A', 'app-2': 'LADO B' };
+const SITE_NAME = INSTANCE_BRANDS[INSTANCE_ID] || 'LADO B';
+const SITE_MARK = SITE_NAME === 'LADO A' ? 'LA' : 'LB';
 const AI_NOTICE = 'Contenido generado con ChatGPT y revisado por el equipo del proyecto.';
 
 const news = [
@@ -167,12 +169,12 @@ function renderHeader(currentPath) {
     <header class="site-header">
       <div class="shell site-header__inner">
         <a class="wordmark" href="/" aria-label="${SITE_NAME}, volver al inicio">
-          <span class="wordmark__mark" aria-hidden="true">LB</span>
+          <span class="wordmark__mark" aria-hidden="true">${SITE_MARK}</span>
           <span><strong>${SITE_NAME}</strong><small>actualidad asistida</small></span>
         </a>
         <nav class="main-nav" aria-label="Navegación principal">
           <a href="/"${homeActive}>Portada</a>
-          <a href="/noticias"${newsActive}>Noticias</a>
+          <a href="/#stories-heading"${newsActive}>Noticias</a>
           <a href="/#metodo">Nuestro método</a>
         </nav>
         <div class="instance-chip" title="Identificador de la instancia que respondió">
@@ -189,7 +191,7 @@ function renderFooter() {
       <div class="shell site-footer__grid">
         <div>
           <a class="wordmark wordmark--footer" href="/" aria-label="${SITE_NAME}, volver al inicio">
-            <span class="wordmark__mark" aria-hidden="true">LB</span>
+            <span class="wordmark__mark" aria-hidden="true">${SITE_MARK}</span>
             <span><strong>${SITE_NAME}</strong><small>actualidad asistida</small></span>
           </a>
           <p class="footer-note">Un laboratorio editorial para aprender a contar el presente con criterio, contexto y herramientas de IA.</p>
@@ -279,7 +281,7 @@ function renderHome({ category = '', query = '' } = {}) {
       <a class="text-link" href="/#metodo">Conoce el método <span aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="shell stories-section" aria-labelledby="stories-heading">
+    <section class="shell stories-section" aria-labelledby="stories-heading" id="historias">
       <div class="section-heading">
         <div><p class="kicker">La selección</p><h2 id="stories-heading">Historias destacadas</h2></div>
         <p class="section-heading__count">${escapeHtml(resultLabel)}</p>
@@ -509,7 +511,7 @@ const server = createServer((request, response) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  process.stdout.write(`LADO B escuchando en http://0.0.0.0:${PORT} · instancia ${INSTANCE_ID}\n`);
+  process.stdout.write(`${SITE_NAME} escuchando en http://0.0.0.0:${PORT} · instancia ${INSTANCE_ID}\n`);
 });
 
 function shutdown(signal) {

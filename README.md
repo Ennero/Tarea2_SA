@@ -13,6 +13,17 @@ Portal académico de noticias sobre tecnología, ciencia, cultura, ambiente, vid
 - Docker y Docker Compose.
 - NGINX 1.27 como reverse proxy y balanceador.
 
+### Procedencia de las imágenes
+
+Las seis imágenes son ilustraciones SVG originales creadas para este proyecto y almacenadas en `public/images/`. No se descargaron de Internet ni dependen de una CDN. Son recursos editoriales abstractos, no fotografías documentales.
+
+### Skills aplicadas
+
+- `frontend-design`: dirección visual editorial, tipografías, paleta de color, composición y microinteracciones.
+- `web-design-guidelines`: revisión de semántica, accesibilidad, foco visible, `alt`, dimensiones de imágenes, formularios y responsive.
+- `playwright-cli`: pruebas de navegador en escritorio/móvil, capturas, validación de rutas y generación del PDF de evidencias.
+- Docker/terminal: construcción, healthchecks, prueba de NGINX, balanceo y failover.
+
 ## Arquitectura
 
 ```text
@@ -20,6 +31,16 @@ Cliente → localhost:8080 → NGINX:80 → newsroom (Round Robin) → app-1:300
 ```
 
 `nginx` es el único servicio con un puerto publicado en el host. `app-1` y `app-2` comparten la imagen `portal-latido-ia:local`, tienen IDs distintos y solo exponen el puerto 3000 dentro de la red `newsroom`.
+
+### Comunicación interna
+
+Docker Compose crea una red virtual llamada `newsroom`. NGINX puede resolver `app-1` y `app-2` por nombre y conectarse internamente a sus puertos `3000`. El usuario solo puede entrar por `http://localhost:8080` porque únicamente NGINX tiene `ports`; las aplicaciones usan `expose`, que no publica sus puertos en el host.
+
+Esto crea un punto de entrada único, permite balancear tráfico, facilita el failover y evita exponer directamente los backends. La explicación ampliada está en `docs/arquitectura.md` y en la bitácora `prompts/noticias.md`.
+
+### Identidad por instancia
+
+Las dos instancias ejecutan el mismo `server.js`, pero reciben valores diferentes de `INSTANCE_ID`. El servidor los transforma en una marca visual: `app-1` muestra **LADO A** y `app-2` muestra **LADO B**, además del distintivo `Instancia app-1/app-2`. El mismo código puede producir ambas variantes porque la configuración llega desde el entorno del contenedor.
 
 Archivos principales:
 
@@ -70,7 +91,8 @@ docker compose down
 ## Rutas configuradas
 
 - `/` — portada con las seis noticias, filtros y buscador.
-- `/noticias` — catálogo de noticias.
+- `/#stories-heading` — ancla usada por el botón **Noticias** para bajar a “Historias destacadas”.
+- `/noticias` — catálogo de noticias directo si se escribe la ruta.
 - `/noticias/:slug` — noticia individual con contenido completo.
 - `/api/noticias` — catálogo en JSON.
 - `/api/noticias/:slug` — noticia individual en JSON.
@@ -142,6 +164,6 @@ El contenido no se presenta como información verificada. Antes de usarlo en un 
 
 ## Entregables y evidencias
 
-El repositorio contiene el código fuente, `Dockerfile`, `docker-compose.yml`, configuración de NGINX, recursos, prompts, README, scripts de verificación, arquitectura y guion de video. La evidencia generada durante esta ejecución está en `docs/evidencias/evidencias.pdf`, junto con las capturas PNG y la matriz `docs/pruebas.md`.
+El repositorio contiene el código fuente, `Dockerfile`, `docker-compose.yml`, configuración de NGINX, recursos, prompts, README, scripts de verificación, arquitectura y guion de video. La evidencia generada durante esta ejecución está en `docs/evidencias/evidencias.pdf`, junto con las capturas PNG y la matriz `docs/pruebas.md`. La bitácora `prompts/noticias.md` también registra las solicitudes y respuestas principales del desarrollo.
 
 Para regenerar o ampliar las evidencias, levantar el proyecto, repetir el flujo de `docs/guion-video.md` y guardar las capturas en `docs/evidencias/`. Para el video final de 3–5 minutos, grabar la secuencia del guion y añadir el enlace en la entrega académica. El guion cubre explícitamente: contenedores, rutas, balanceo, dos IDs de instancia, failover y atribución de IA.
