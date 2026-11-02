@@ -1,26 +1,15 @@
-# Logs
-logs
-*.log
+# Node & NPM
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
-# Node / tooling
-node_modules/
-coverage/
-.nyc_output/
-.cache/
-.vscode-test/
-
-# Environment files
+.pnpm-debug.log*
+dist/
+build/
 .env
-.env.*
-!.env.example
-
-# Browser sessions and temporary reports
-.playwright-cli/
-
-# OS
+.env.local
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/

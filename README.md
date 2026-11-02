@@ -1,4 +1,23 @@
-# LADO B · Portal de noticias asistidas por IA
+<div align="center">
+
+# 🐳 Microservice Containerization & Automated Testing in Docker (SA)
+
+**Contenerización de microservicio web en Docker con servidor Express y suite de pruebas automatizadas.**
+
+[![Language](https://img.shields.io/badge/Language-JavaScript,%20Docker-blue?style=for-the-badge)](https://github.com/Ennero/Tarea2_SA)
+[![Course](https://img.shields.io/badge/Course-Software%20Avanzado-003366?style=for-the-badge)](https://ingenieria.usac.edu.gt/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+</div>
+
+---
+
+
+## 📌 Contexto Académico
+
+Proyecto desarrollado en el marco del curso **Software Avanzado** de la carrera de Ingeniería en Ciencias y Sistemas en la Universidad de San Carlos de Guatemala (USAC).
+
+---
 
 Portal académico de noticias sobre tecnología, ciencia, cultura, ambiente, videojuegos y comunidad. La aplicación está contenerizada con Docker Compose, publicada únicamente a través de NGINX y distribuida entre dos instancias privadas de Node.js.
 
@@ -167,3 +186,16 @@ El contenido no se presenta como información verificada. Antes de usarlo en un 
 El repositorio contiene el código fuente, `Dockerfile`, `docker-compose.yml`, configuración de NGINX, recursos, prompts, README, scripts de verificación, arquitectura y guion de video. El informe formal `docs/evidencias/evidencias.pdf` incluye los datos del estudiante, la evidencia visual de Docker Desktop, acceso al portal, rutas, IA, balanceo, failover y fragmentos de los archivos técnicos. También se incluyen las capturas PNG, `docker-containers.svg` y la matriz `docs/pruebas.md`. La bitácora `prompts/noticias.md` registra las solicitudes y respuestas principales del desarrollo.
 
 Para regenerar o ampliar las evidencias, levantar el proyecto, repetir el flujo de `docs/guion-video.md` y guardar las capturas en `docs/evidencias/`. Para el video final de 3–5 minutos, grabar la secuencia del guion y añadir el enlace en la entrega académica. El guion cubre explícitamente: contenedores, rutas, balanceo, dos IDs de instancia, failover y atribución de IA.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+- **Enner Mendizabal** - [@Ennero](https://github.com/Ennero)  
+- *Facultad de Ingeniería, Universidad de San Carlos de Guatemala.*
